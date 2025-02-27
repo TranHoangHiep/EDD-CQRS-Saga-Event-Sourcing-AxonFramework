@@ -1,3 +1,10 @@
 .DS_Store
 event-driven-microservices
 axonserver
+code/section3/customer/target/
+code/section3/eurekaserver/target/
+code/section3/gatewayserver/target/
+code/section3/.idea
+code/section3/.idea/compiler.xml
+code/section3/.idea/compiler.xml
+code/section3/.idea/

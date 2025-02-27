@@ -4,7 +4,7 @@ spring:
   application:
     name: "customer"
   datasource:
-    url: "jdbc:h2:file:~/customer;AUTO_SERVER=true"
+    url: "jdbc:h2:file:~/Users/hoanghiep/Downloads/Studying/Microservices/code/EDD-CQRS-Saga-Event-Sourcing-AxonFramework/db/customer;AUTO_SERVER=true"
     driver-class-name: "org.h2.Driver"
     username: sa
     password: ''
