@@ -24,12 +24,12 @@ public class CustomerController {
         this.iCustomerService = iCustomerService;
     }
 
-    @GetMapping("/fetch")
-    public ResponseEntity<CustomerDto> fetchCustomerDetails(@RequestParam("mobileNumber")
-    @Pattern(regexp = "(^$|[0-9]{10})", message = "Mobile number must be 10 digits")
-    String mobileNumber) {
-        CustomerDto fetchedCustomer = iCustomerService.fetchCustomer(mobileNumber);
-        return ResponseEntity.status(org.springframework.http.HttpStatus.OK).body(fetchedCustomer);
-    }
+//    @GetMapping("/fetch")
+//    public ResponseEntity<CustomerDto> fetchCustomerDetails(@RequestParam("mobileNumber")
+//    @Pattern(regexp = "(^$|[0-9]{10})", message = "Mobile number must be 10 digits")
+//    String mobileNumber) {
+//        CustomerDto fetchedCustomer = iCustomerService.fetchCustomer(mobileNumber);
+//        return ResponseEntity.status(org.springframework.http.HttpStatus.OK).body(fetchedCustomer);
+//    }
 
 }

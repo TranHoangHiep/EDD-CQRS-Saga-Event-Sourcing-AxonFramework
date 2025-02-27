@@ -43,7 +43,7 @@ public class CustomerCommandController {
                 .body(new ResponseDto(CustomerConstants.STATUS_201, CustomerConstants.MESSAGE_201));
     }
 
-    @PostMapping("/update")
+    @PutMapping("/update")
     public ResponseEntity<ResponseDto> updateCustomerDetails(@Valid @RequestBody CustomerDto customerDto) {
         UpdateCustomerCommand updateCustomerCommand = UpdateCustomerCommand.builder()
                 .customerId(customerDto.getCustomerId())
@@ -59,7 +59,6 @@ public class CustomerCommandController {
                 .status(HttpStatus.OK)
                 .body(new ResponseDto(CustomerConstants.STATUS_200, CustomerConstants.STATUS_200));
     }
-
     @PatchMapping("/delete")
     public ResponseEntity<ResponseDto> deleteCustomer(@RequestParam("customerId")
                                                       @Pattern(regexp = "(^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-5][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}$)",
