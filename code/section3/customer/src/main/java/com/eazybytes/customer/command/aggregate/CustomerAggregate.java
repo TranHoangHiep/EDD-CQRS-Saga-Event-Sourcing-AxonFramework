@@ -31,12 +31,13 @@ public class CustomerAggregate {
     public CustomerAggregate() {}
 
     @CommandHandler
-    public CustomerAggregate(CreateCustomerCommand createCustomerCommand, CustomerRepository customerRepository) {
-        Optional<Customer> optionalCustomer = customerRepository.findByMobileNumberAndActiveSw(createCustomerCommand.getMobileNumber(), true);
-        if (optionalCustomer.isPresent()) {
-            throw new CustomerAlreadyExistsException("Customer already registered with given mobileNumber "
-                    + createCustomerCommand.getMobileNumber());
-        }
+//    public CustomerAggregate(CreateCustomerCommand createCustomerCommand, CustomerRepository customerRepository) {
+    public CustomerAggregate(CreateCustomerCommand createCustomerCommand) {
+//        Optional<Customer> optionalCustomer = customerRepository.findByMobileNumberAndActiveSw(createCustomerCommand.getMobileNumber(), true);
+//        if (optionalCustomer.isPresent()) {
+//            throw new CustomerAlreadyExistsException("Customer already registered with given mobileNumber "
+//                    + createCustomerCommand.getMobileNumber());
+//        }
 
         CustomerCreatedEvent customerCreatedEvent = new CustomerCreatedEvent();
         BeanUtils.copyProperties(createCustomerCommand, customerCreatedEvent);
