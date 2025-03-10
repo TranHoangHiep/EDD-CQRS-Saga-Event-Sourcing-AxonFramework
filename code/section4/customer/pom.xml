@@ -9,10 +9,10 @@
         <relativePath>../eazy-bom/pom.xml</relativePath>
     </parent>
     <groupId>com.eazybytes</groupId>
-    <artifactId>profile</artifactId>
+    <artifactId>customer</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
-    <name>profile</name>
+    <name>customer</name>
     <description>Microservice for Customers</description>
     <dependencies>
         <dependency>
@@ -53,6 +53,5 @@
             <artifactId>axon-spring-boot-starter</artifactId>
         </dependency>
     </dependencies>
-
 
 </project>
